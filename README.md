@@ -29,9 +29,19 @@ de la solución.
 ### 3. METODOLOGÍA Y ACTIVIDADES
 #### 3.1 FASE 1 Concepto teorico
 
-- Arquitectura de 3 capas. 
+- Arquitectura de 3 capas.
+Se hace en tres niveles principales.
+  Capa de presentación: Para la interacción con el usuario.
+  Capa de lógica de negocio: Para manejar las reglas y procesos propios del sistema.
+  Capa de acceso a datos: Maneja la comunicación con la fuente de datos.
 - Arquitectura de N capas.
+  Ayuda en la separaciond de separacion de responsabilidades.
+  Pero esto depende de la complejidad del proyecto.
+
+
 - Dependencias entre capas.
+  Esto ayudara en el manejo de responsabilidades de varias componentes y un manejo adecuado de las responsabilidades separadas.
+
 
 #### 3.2 FASE 2 Diseño práctico
 
