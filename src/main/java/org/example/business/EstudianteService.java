@@ -33,9 +33,9 @@ public class EstudianteService {
         return false;
     }
 
-    public Boolean eliminar(Estudiante estudiante) {
+    public Boolean eliminar(int id) {
         List<Estudiante> estudiantes = repository.listar();
-        boolean eliminado = estudiantes.removeIf(e -> e.getId() == estudiante.getId());
+        boolean eliminado = estudiantes.removeIf(e -> e.getId() == id);
         if (eliminado) {
             repository.guardar(estudiantes);
         }
