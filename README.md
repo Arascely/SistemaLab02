@@ -1,7 +1,9 @@
 ## Laboratorio de Arquitectura de Software
-- Asignatura: IS488 Arquitectura de Software
-- Semestre: 2025-I
-- Docente: Ing. Luis Adderlin RUIZ HUAMAN
+
+> **Asignatura:** IS-488 Arquitectura de Software  
+> **Semestre:** 2025-I  
+> **Docente:** Ing. Luis Adderlin Ruiz Huaman
+
 ## Sesión: 02 – Diseño inicial en 3 capas y N capas
 
 ### 1. PROPOSITO DEL LABORATORIO
@@ -27,13 +29,14 @@ de la solución.
 7. Relacionar la estructura arquitectónica con la organización del código fuente.
 
 ### 3. METODOLOGÍA Y ACTIVIDADES
-#### 3.1 FASE 1 Concepto teorico
+#### 3.1 FASE 1 Concepto teórico
 
 - Arquitectura de 3 capas.
 Se hace en tres niveles principales.
-  Capa de presentación: Para la interacción con el usuario.
-  Capa de lógica de negocio: Para manejar las reglas y procesos propios del sistema.
-  Capa de acceso a datos: Maneja la comunicación con la fuente de datos.
+- Arquitectura de 3 capas. Se hace en tres niveles principales:
+  - **Capa de presentación:** Para la interacción con el usuario.
+  - **Capa de lógica de negocio:** Para manejar las reglas y procesos propios del sistema.
+  - **Capa de acceso a datos:** Maneja la comunicación con la fuente de datos.
 - Arquitectura de N capas.
   Ayuda en la separaciond de separacion de responsabilidades.
   Pero esto depende de la complejidad del proyecto.
@@ -68,6 +71,10 @@ El diseño refleja la división en Capa de Presentación, Capa de Lógica de Neg
 ### 6. IDENTIFICACION DE DEPENDENCIAS
 
 En el diagrama se puede observar:
+
+<img width="1010" height="667" alt="Captura de pantalla 2026-09-29 225450" src="https://github.com/user-attachments/assets/4b391ede-10c3-4c6b-b28d-e274d87e6d9b" />
+
+
 - Dependencias entre capas: Se observa un flujo unidireccional indicado por flechas: la Capa de Presentación depende de la Capa de Lógica de Negocio, esta a su vez depende de la Capa de Acceso a Datos, y finalmente esta última se conecta a la Base de datos.
 - Componentes que solicitan servicios: La "Interfaz de Estudiantes" y la "Interfaz de Cursos", ubicadas en la Capa de Presentación.
 - Componentes que procesan información: El "Servicio de Estudiantes" y "Servicio de Cursos", ubicados en la Capa de Lógica de Negocio.
