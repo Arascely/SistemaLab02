@@ -48,16 +48,42 @@ Se hace en tres niveles principales.
 - Diseño una arquitectura inicial de 3 capas.
  Es el caso propuesto de Sistema de Gestión Academica donde el sistema debe permitir registrar estudiantes, registrar cursos, docentes, matricular estudiantes, consultar cursos, etc. Aparte de identificar los modulos, se debe identificar las respomsabilidades de cada componente y determinar que información requiere almacenarse en la BD.
 
-#### 3.3 FASE 3 Análisis y entrega
-
 
 ### 4. DISEÑO DE LA ARQUITECTURA DE 3 CAPAS
 
+El diseño refleja la división en Capa de Presentación, Capa de Lógica de Negocio y Capa de Acceso a Datos.
+- Capa de Presentación: Encargada de las interfaces (estudiantes y cursos)
+- Capa de Lógica de Negocio: Contiene los servicios que aplican las reglas a los módulos del sistema.
+- Capa de Acceso a Datos: Encargada de los repositorios que se comunican con la fuente de datos.
+
 ### 5. DISEÑO DE LA ARQUITECTURA N CAPAS
+
+- Capa de Presentación: Muestra las interfaces, formularios y recibe las solicitudes del usuario.
+- Capa de Controladores: Intercepta las peticiones de la vista y decide a qué servicio enviarlas.
+- Capa de Servicios / Lógica de Negocio: Contiene las reglas del negocio y el procesamiento de la información.
+- Capa de Repositorios: Abstrae las consultas y actúa como intermediario para insertar, modificar o eliminar registros.
+- Capa de Acceso a Datos: Maneja la conexión directa hacia la base de datos.
+- Base de Datos: Realiza la persistencia física de la información.
 
 ### 6. IDENTIFICACION DE DEPENDENCIAS
 
+En el diagrama se puede observar:
+- Dependencias entre capas: Se observa un flujo unidireccional indicado por flechas: la Capa de Presentación depende de la Capa de Lógica de Negocio, esta a su vez depende de la Capa de Acceso a Datos, y finalmente esta última se conecta a la Base de datos.
+- Componentes que solicitan servicios: La "Interfaz de Estudiantes" y la "Interfaz de Cursos", ubicadas en la Capa de Presentación.
+- Componentes que procesan información: El "Servicio de Estudiantes" y "Servicio de Cursos", ubicados en la Capa de Lógica de Negocio.
+- Componentes que acceden a los datos: El "Repositorio de Estudiantes" y el "Repositorio de Curso", ubicados en la Capa de Acceso a Datos.
+
 ### 7. COMPARACION DE LAS ARQUITECTURAS
+
+| Criterio | Arquitectura de 3 capas | Arquitectura de N capas |
+|---|---|---|
+| **Número de capas** | Organiza el sistema en presentación, lógica de negocio y acceso a datos. | Permite dividir las responsabilidades en un número mayor de capas especializadas. |
+| **Separación de responsabilidades** | Estructura sencilla y apropiada para sistemas de menor complejidad. | Permite una separación más detallada de responsabilidades. |
+| **Complejidad** | Presenta una estructura más simple y directa. | Mayor complejidad al añadir más intermediarios funcionales. |
+| **Mantenimiento** | Fácil mantenimiento en sistemas con módulos definidos. | Facilita el mantenimiento de sistemas muy grandes y complejos a largo plazo. |
+| **Organización de componentes** | Agrupa interfaces, servicios y repositorios en sus respectivos tres bloques principales. | Desglosa aún más los servicios, controladores y repositorios en distintos niveles. |
+| **Aplicabilidad al caso** | Ideal para la construcción del esqueleto arquitectónico inicial de la solución propuesta. | Recomendada si a futuro el sistema académico crece integrando múltiples plataformas. |
 
 ### 8. DOCUMENTACION DEL DISEÑO
 
+https://docs.google.com/document/d/1_HKlMQ1t7g6omy2nbZTFD4Rv1tYGaPuwqR2UBS5ai-Y/edit?usp=sharing

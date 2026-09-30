@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CursoRepository {
-    private final String archivo = "data/cursos.json"; // Se usa el archivo de cursos existente.
+    private final String archivo = "data/cursos.json";
     private final Gson gson = new Gson();
 
     public List<Curso> listar() {
