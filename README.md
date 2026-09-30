@@ -74,7 +74,6 @@ En el diagrama se puede observar:
 
 <img width="1010" height="667" alt="Captura de pantalla 2026-09-29 225450" src="https://github.com/user-attachments/assets/4b391ede-10c3-4c6b-b28d-e274d87e6d9b" />
 
-
 - Dependencias entre capas: Se observa un flujo unidireccional indicado por flechas: la Capa de Presentación depende de la Capa de Lógica de Negocio, esta a su vez depende de la Capa de Acceso a Datos, y finalmente esta última se conecta a la Base de datos.
 - Componentes que solicitan servicios: La "Interfaz de Estudiantes" y la "Interfaz de Cursos", ubicadas en la Capa de Presentación.
 - Componentes que procesan información: El "Servicio de Estudiantes" y "Servicio de Cursos", ubicados en la Capa de Lógica de Negocio.
@@ -93,4 +92,4 @@ En el diagrama se puede observar:
 
 ### 8. DOCUMENTACION DEL DISEÑO
 
-https://docs.google.com/document/d/1_HKlMQ1t7g6omy2nbZTFD4Rv1tYGaPuwqR2UBS5ai-Y/edit?usp=sharing
+La documentacion se encuentra en un archivo PDF.
